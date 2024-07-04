@@ -12,3 +12,13 @@ static void terminate(const char *message)
     printf("%s\n", message);
     exit(EXIT_FAILURE);
 }
+
+void make_empty(void)
+{
+    top = 0;
+}
+
+bool is_empty(void)
+{
+    return top == 0;
+}
