@@ -22,3 +22,17 @@ bool is_empty(void)
 {
     return top == 0;
 }
+
+bool is_full(void)
+{
+    return top == STACK_SIZE;
+}
+
+void push(int i)
+{
+    if (is_full())
+    {
+        terminate("Error in push: stack is full.");
+    }
+    contents[top++] = i;
+}
