@@ -36,3 +36,12 @@ void push(int i)
     }
     contents[top++] = i;
 }
+
+int pop(void)
+{
+    if (is_empty())
+    {
+        terminate("Error in pop: stack is empty.");
+    }
+    return contents[--top];
+}
