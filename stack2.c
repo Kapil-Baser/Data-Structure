@@ -34,3 +34,16 @@ bool is_full(void)
 {
     return false;
 }
+
+void push(int i)
+{
+    struct node *new = malloc(sizeof(*new));
+    if (new == NULL)
+    {
+        terminate("Error in push: stack is full.");
+    }
+
+    new->data = i;
+    new->next = top;
+    top = new;
+}
