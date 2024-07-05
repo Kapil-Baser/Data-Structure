@@ -47,3 +47,20 @@ void push(int i)
     new->next = top;
     top = new;
 }
+
+int pop(void)
+{
+    struct node *old_top;
+    int i;
+
+    if (is_empty())
+    {
+        printf("Error in top: stack is empty.");
+    }
+
+    old_top = top;
+    i = top->data;
+    top = top->next;
+    free(old_top);
+    return i;
+}
