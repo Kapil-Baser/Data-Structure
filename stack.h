@@ -2,6 +2,13 @@
 #define STACK_H
 
 #include <stdbool.h>
+#define STACK_SIZE 100
+
+typedef struct
+{
+    int contents[STACK_SIZE];
+    int top;
+}Stack;
 
 /* Function prototypes */
 void make_empty(void);
