@@ -19,5 +19,18 @@ static void terminate(const char *message)
 
 void make_empty(void)
 {
-    
+    while (!is_empty())
+    {
+        pop();
+    }
+}
+
+bool is_empty(void)
+{
+    return top == NULL;
+}
+
+bool is_full(void)
+{
+    return false;
 }
